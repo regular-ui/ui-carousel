@@ -1,0 +1,19 @@
+{
+  "name": "rgui-ui-carousel",
+  "description": "Regular UI - Carousel",
+  "version": "0.2.0-alpha",
+  "author": "Rainfore <rainforest92@126.com>",
+  "main": "./index.js",
+  "repository": "regular-ui/ui-carousel",
+  "homepage": "http://regular-ui.github.io",
+  "bugs": {"url": "http://github.com/regular-ui/ui-carousel/issues"},
+  "license": "MIT",
+  "keywords": ["regular", "ui", "rgui", "carousel"],
+  "tags": ["regular", "ui", "rgui", "carousel"],
+  "dependencies": {
+    "rgui-ui-base": "^0.2.0-alpha.5"
+  },
+  "peerDependencies": {
+    "regularjs": "^0.4.3"
+  }
+}
