@@ -1,47 +1,85 @@
 ## 示例
-
-在这里添加该组件的基础文档示例。
-
-每个示例以`<div class="m-example"></div>`开头，后面添加相应的代码段。支持的代码段有：
-- `css`，会以`<style>`包裹css代码的形式添加到文档中；
-- `xml`，表示Regular模板，如果没有js代码段，会自动创建一个component对象，$inject到`.m-example`中；
-- `javascript`，添加js代码，请自行声明一个component对象。
-
 ### 基本形式
 
 <div class="m-example"></div>
 
 ```xml
-<carousel />
+<carousel>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/1.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/2.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/3.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/4.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/5.jpg" /></carouselItem>
+</carousel>
 ```
 
-### Message属性
+### 动画
+#### fade
 
 <div class="m-example"></div>
 
 ```xml
-<carousel message="Test" />
+<carousel animation="fade">
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/1.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/2.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/3.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/4.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/5.jpg" /></carouselItem>
+</carousel>
 ```
 
-### 只读和禁用
+#### scroll
 
 <div class="m-example"></div>
 
 ```xml
-<div class="g-row">
-    <div class="g-col g-col-6"><carousel readonly /></div>
-    <div class="g-col g-col-6"><carousel disabled /></div>
-</div>
+<carousel animation="scroll">
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/1.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/2.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/3.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/4.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/5.jpg" /></carouselItem>
+</carousel>
 ```
 
-## 案例
-
-在这里添加该组件的高级案例。
-
-### 高级技巧
+#### swipe
 
 <div class="m-example"></div>
 
 ```xml
-<carousel />
+<carousel animation="swipe">
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/1.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/2.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/3.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/4.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/5.jpg" /></carouselItem>
+</carousel>
+```
+
+#### zoom-in
+
+<div class="m-example"></div>
+
+```xml
+<carousel animation="zoom-in">
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/1.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/2.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/3.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/4.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/5.jpg" /></carouselItem>
+</carousel>
+```
+
+#### zoom-out
+
+<div class="m-example"></div>
+
+```xml
+<carousel animation="zoom-out">
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/1.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/2.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/3.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/4.jpg" /></carouselItem>
+    <carouselItem><img src="http://d.lanrentuku.com/down/js/jiaodiantu-1135/images/5.jpg" /></carouselItem>
+</carousel>
 ```

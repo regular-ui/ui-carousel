@@ -1,17 +1,14 @@
 .m-carousel {
     position: relative;
-    min-height: 336px;
+    overflow: hidden;
+    width: 700px;
+    height: 420px;
 
     .carousel_item {
-        > a {
-            display: block;
-            width: 720px;
-            margin: 0 auto;
-
-            > img {
-                display: block;
-            }
-        }
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 100%;
     }
 
     .carousel_item.z-crt {
@@ -21,31 +18,160 @@
     .carousel_nav {
         @extend .f-lsn;
         position: absolute;
-        left: 50%;
+        z-index: 100;
+        left: 0;
         right: 0;
-        bottom: 5px;
+        bottom: 10px;
         text-align: center;
-        width: 720px;
 
         > li {
             display: inline-block;
             cursor: pointer;
-            $size: 22px;
 
-            > span {
+            &:after {
+                content: '';
                 display: inline-block;
                 margin: 8px;
-                $size: 6px;
+                $size: 8px;
                 $border-radius: 100%;
-                background: rgba(255, 255, 255, 0.6);
-                $box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+                background: rgba(255, 255, 255, 0.3);
+                $box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
             }
         }
 
         > li:hover, > li.z-crt {
-            > span {
-                background: #b90b0b;
+            &:after {
+                background: rgba(255, 255, 255, 1);
+                // background: #666;
             }
         }
+    }
+
+    .carousel_btn {
+        position: absolute;
+        z-index: 100;
+        font-size: 60px;
+        color: rgba(255, 255, 255, 0.6);
+        $transition: all 0.3s;
+        top: 36%;
+    }
+
+    .carousel_btn:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .carousel_btn-prev {
+        left: 20px;
+
+        &:before {
+            @extend .u-icon;
+            @extend .u-icon-angle-left:before;
+        }
+    }
+
+    .carousel_btn-next {
+        right: 20px;
+
+        &::before {
+            @extend .u-icon;
+            @extend .u-icon-angle-right:before;
+        }
+    }
+}
+
+.m-carousel-fade {
+    .carousel_item {
+        display: block;
+        $transition: all 0.5s ease-out;
+        $opacity: 0;
+    }
+
+    .carousel_item.z-crt {
+        z-index: 10;
+        $opacity: 1;
+    }
+}
+
+.m-carousel-scroll {
+    .carousel_item {
+        display: block;
+        $transition: all 0.5s ease-out;
+    }
+
+    .carousel_item.z-crt {
+        z-index: 10;
+        $transform: translateX(0);
+    }
+
+    .carousel_item.z-prev {
+        $transform: translateX(-100%);
+    }
+
+    .carousel_item.z-next {
+        $transform: translateX(100%);
+    }
+}
+
+.m-carousel-swipe {
+    .carousel_item {
+        display: block;
+        $transition: all 0.5s ease-out;
+    }
+
+    .carousel_item.z-crt {
+        z-index: 10;
+        $transform: translateX(0);
+    }
+
+    .carousel_item.z-prev {
+        $transform: translateX(-100%);
+    }
+
+    .carousel_item.z-next {
+        $transform: translateX(100%);
+    }
+
+    .carousel_item.z-act {
+        $transform: translateX(0);
+        // $transition: none;
+    }
+}
+
+.m-carousel-zoom-in {
+    .carousel_item {
+        display: block;
+        $transition: all 0.5s ease-in;
+        $opacity: 0;
+    }
+
+    .carousel_item.z-crt {
+        z-index: 10;
+        $opacity: 1;
+        $transform: scale(1);
+    }
+
+    .carousel_item.z-act {
+        $transform: scale(2);
+    }
+}
+
+.m-carousel-zoom-out {
+    .carousel_item {
+        display: block;
+        $transition: all 0.5s ease-out;
+        $opacity: 0;
+        $transform: scale(2);
+    }
+
+    .carousel_item.z-crt {
+        z-index: 10;
+        $opacity: 1;
+        $transform: scale(1);
+    }
+
+    .carousel_item.z-act {
+        $opacity: 1;
+        $transform: scale(1);
+        // $transition: none;
     }
 }

@@ -1,3 +1,4 @@
 import Carousel from './carousel';
+import CarouselItem from './carouselItem';
 
-export { Carousel };
+export { Carousel, CarouselItem };

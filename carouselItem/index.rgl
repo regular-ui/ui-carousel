@@ -1,0 +1,7 @@
+<div class="carousel_item {class}"
+    z-crt={this.isCurrent()}
+    z-act={this.isActive()}
+    z-prev={this.isPrev()}
+    z-next={this.isNext()}>
+    {#inc this.$body}
+</div>

@@ -1,16 +1,14 @@
-<div class="m-carousel {class}" z-dis={disabled} r-hide={!visible}>
+<div class="m-carousel m-carousel-{animation} {class}" z-dis={disabled} r-hide={!visible}>
     <div class="carousel_list">
-        {#list list as item}
-        <div class="carousel_item" r-hide={current !== item_index} r-animation={animation} style="background: {item.color}">
-            <a href={item.href}><img src={item.src} /></a>
-        </div>
-        {/list}
+        {#inc this.$body}
     </div>
     <ul class="carousel_nav">
-        {#list list as item}
-        <li z-crt={current === item_index} on-click={current = item_index}><span></span></li>
+        {#list _list as item}
+        <li z-crt={current === item_index} on-click={this.select(item_index) || this.resetInterval()}>
+            {#if @(titleTemplate)}{#inc @(titleTemplate)}{#else}{item.data.title}{/if}
+        </li>
         {/list}
     </ul>
-    <div class="carousel_prev"></div>
-    <div class="carousel_next"></div>
+    <a class="carousel_btn carousel_btn-prev" on-click={this.prev() || this.resetInterval()}></a>
+    <a class="carousel_btn carousel_btn-next" on-click={this.next() || this.resetInterval()}></a>
 </div>
