@@ -3,8 +3,8 @@ import template from './index.rgl';
 
 /**
  * @class Carousel
- * @extend Component
- * @param {object}                  options.data                     =  绑定属性
+ * @extends Component
+ * @param {Object}                  options.data                     =  绑定属性
  * @param {number=0}                options.data.current            <=> 当前页
  * @param {number=4000}             options.data.duration            => 切换间隔
  * @param {string=''}               options.data.animation           => 动画。支持`fade`, `scroll`, `swipe`, `zoom-in`, `zoom-out`
